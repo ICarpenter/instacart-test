@@ -1,0 +1,17 @@
+{
+  "name": "instacart-challenge",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "createDB": "installpart2.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "csv-write-stream": "^2.0.0",
+    "express": "^4.15.3",
+    "moment": "^2.18.1",
+    "sqlite3": "^3.1.8"
+  }
+}

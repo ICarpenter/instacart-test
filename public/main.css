@@ -1,0 +1,13 @@
+.navbar {
+    background-color: #cccccc;
+}
+
+.navbar-inner {
+    display: flex;
+    justify-content: flex-end;
+}
+
+form {
+    display: flex;
+    justify-content: space-between;
+}

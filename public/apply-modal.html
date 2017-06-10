@@ -1,0 +1,51 @@
+<div class="modal-header">
+    <h3 class="modal-title" id="modal-title">Apply for Instacart!</h3>
+</div>
+<div class="modal-body" id="modal-body">
+    <form name="$ctrl.applyForm">
+        <fieldset>
+            <label>First Name</label>
+            <input
+                type="text"
+                name="first_name"
+                ng-model="user.first_name"
+                ng-minlength="2"
+                ng-required="true"
+                placeholder="John">
+            <div ng-messages="$ctrl.applyForm.first_name.$error" ng-if="$ctrl.applyForm.first_name.$dirty" role="alert">
+                <div ng-message="required">You did not enter a first name.</div>
+                <div ng-message="minlength">Your first name must have at least 2 chars</div>
+            </div>
+        </fieldset>
+        <fieldset>
+            <label>Last Name</label>
+            <input
+                type="text"
+                name="last_name"
+                ng-model="user.last_name"
+                ng-minlength="2"
+                ng-required="true"
+                placeholder="Smith">
+            <div ng-messages="$ctrl.applyForm.last_name.$error" ng-if="$ctrl.applyForm.last_name.$dirty" role="alert">
+                <div ng-message="required">You did not enter a last name.</div>
+                <div ng-message="minlength">Your first name must have at least 2 chars</div>
+            </div>
+        </fieldset>
+        <fieldset>
+            <label>Email</label>
+            <input
+                type="email"
+                name="email_address"
+                ng-model="user.email_address"
+                ng-required="true"
+                placeholder="john@smith.com">
+            <div ng-messages="$ctrl.applyForm.email_address.$error" ng-if="$ctrl.applyForm.email_address.$dirty" role="alert">
+                <div ng-message="required">You did not enter an email.</div>
+            </div>
+        </fieldset>
+    </form>
+</div>
+<div class="modal-footer">
+    <button class="btn btn-primary" type="button" ng-click="$ctrl.ok()">Submit</button>
+    <button class="btn btn-warning" type="button" ng-click="$ctrl.cancel()">Cancel</button>
+</div>
